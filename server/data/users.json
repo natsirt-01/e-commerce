@@ -7,8 +7,8 @@
     "address": "",
     "role": "admin",
     "password": {
-      "salt": "bcd51717fb34ab0b9de23b27635406b1",
-      "hash": "0be8d1f714fe015b093bacaeb8d3ebb5086a83cc74ec6c8a78cb802b88883c6a2b6171f1eca7c95be030c469b6c8162a7c020552b0fda111efc8054f8fc782bf"
+      "salt": "1a12f78dc50048d51c5eb03d6e9ea7db",
+      "hash": "986b5f81faa7dedc60ead132a03c9785ba2352dbda53af0f0dba01ffa282d12cb230aaa4fe17ad34ecd15ede85719915c3bb24980bfdc3da78c4545e340444a1"
     }
   },
   {
@@ -33,6 +33,18 @@
     "password": {
       "salt": "1755200f8071f8ee4c6c407a4499fcbc",
       "hash": "46fc4326dcba56baa7df014e4cc3c483add08c78d48e55a123c91fd84d53c5bd74e0776c53ac228bbb750bac45672a347b28f336cd675aa8017ef0d774e13f29"
+    }
+  },
+  {
+    "id": "user-1793956711928",
+    "name": "devega",
+    "email": "devegachristian41@gmail.com",
+    "phone": "09516414852",
+    "address": "sta ana ",
+    "role": "customer",
+    "password": {
+      "salt": "555291840e1cb9c81f60f2aa40f8e87e",
+      "hash": "f92d352fa0994f5f605a55d683b403555bf33445142f2b3327468089e50c934ee06322edb49e4fcc844e310ab8f83e3f6b6bc7390ae93fa13e0132620cf4744f"
     }
   }
 ]

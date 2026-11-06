@@ -235,8 +235,8 @@ h1, h2, h3 { color: var(--ink); }
 .admin-stats div { min-width: 105px; display: grid; gap: 2px; padding: 12px; border: 1px solid var(--line); background: var(--white); }
 .admin-stats b { color: var(--leaf); font-size: 19px; }
 .admin-stats span { color: var(--muted); font-size: 9px; }
-.admin-tabs { display: flex; gap: 5px; border-bottom: 1px solid var(--line); }
-.admin-tabs button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); font-size: 11px; }
+.admin-tabs { display: flex; gap: 5px; overflow-x: auto; border-bottom: 1px solid var(--line); }
+.admin-tabs button { display: inline-flex; flex-shrink: 0; align-items: center; gap: 8px; padding: 12px 14px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); font-size: 11px; white-space: nowrap; }
 .admin-tabs button.active { border-color: var(--ember); color: var(--ink); font-weight: 700; }
 .admin-tabs button span { min-width: 18px; padding: 2px 5px; border-radius: 10px; background: #e8e6de; text-align: center; font-size: 9px; }
 .admin-products-layout { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr); gap: 25px; padding-top: 22px; align-items: start; }
@@ -271,6 +271,18 @@ h1, h2, h3 { color: var(--ink); }
 .seller-message-heading b { font-size: 10px; }
 .seller-message-product { align-self: start; padding: 5px 8px; background: var(--pale-green); color: var(--leaf); font-size: 9px; }
 .seller-message-row > p { margin: 0; color: #55574e; font-size: 10px; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.admin-customer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 14px 0; border-top: 1px solid #e9e7df; }
+.admin-customer-info { min-width: 0; display: grid; gap: 5px; }
+.admin-customer-info b { font-size: 11px; }
+.admin-customer-info > span { color: var(--muted); font-size: 9px; overflow-wrap: anywhere; }
+.admin-customer-info small { font-size: 9px; font-weight: 700; }
+.customer-active { color: var(--leaf); }
+.customer-inactive { color: #ae402a; }
+.admin-customer-actions { display: flex; align-items: start; gap: 5px; }
+.admin-customer-actions .icon-button { min-height: 30px; padding: 0 7px; font-size: 9px; }
+.admin-customer-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; width: 100%; padding-top: 8px; }
+.admin-customer-form > div { display: flex; align-items: center; gap: 12px; }
+.admin-customer-form input { min-height: 36px; }
 
 .customer-workspace { min-height: 100vh; background: #f5f4ef; color: var(--ink); }
 .customer-topbar { min-height: 70px; position: sticky; top: 0; z-index: 8; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 0 clamp(18px, 5vw, 72px); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.97); box-shadow: 0 4px 16px rgba(32,35,29,.035); backdrop-filter: blur(12px); }
@@ -438,6 +450,8 @@ h1, h2, h3 { color: var(--ink); }
   .admin-section-title { align-items: start; }
   .admin-order-row { align-items: start; flex-direction: column; }
   .admin-status-control { flex-basis: auto; }
+  .admin-customer-row { flex-direction: column; }
+  .admin-customer-form { grid-template-columns: 1fr; }
   .customer-topbar { min-height: 58px; flex-wrap: wrap; gap: 0 8px; padding: 0 14px; }
   .customer-topbar > .wordmark { font-size: 12px; }
   .customer-topbar > .wordmark .brand-mark { width: 27px; height: 27px; }

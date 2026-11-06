@@ -63,7 +63,8 @@ async function auth(req, _res, next) {
   const claims = token ? verifySessionToken(token) : undefined
   if (claims) {
     const users = await readCollection('users')
-    req.user = users.find((user) => user.id === claims.sub)
+    const user = users.find((entry) => entry.id === claims.sub)
+    if (user?.active !== false) req.user = user
   }
   next()
 }
@@ -127,6 +128,45 @@ app.get('/api/products', async (_req, res) => res.json(await readCollection('pro
 app.get('/api/admin/messages', requireUser, requireAdmin, async (_req, res) => {
   const messages = await readCollection('messages')
   res.json(messages.sort((a, b) => b.createdAt.localeCompare(a.createdAt)))
+})
+
+app.get('/api/admin/customers', requireUser, requireAdmin, async (_req, res) => {
+  const users = await readCollection('users')
+  res.json(users.filter((user) => user.role === 'customer').map((user) => ({ ...publicUser(user), active: user.active !== false })))
+})
+
+app.put('/api/admin/customers/:id', requireUser, requireAdmin, async (req, res) => {
+  const name = typeof req.body.name === 'string' ? req.body.name.trim() : ''
+  const phone = typeof req.body.phone === 'string' ? req.body.phone.trim() : ''
+  const address = typeof req.body.address === 'string' ? req.body.address.trim() : ''
+  if (!name) return res.status(400).json({ error: 'Enter a customer name.' })
+  const users = await readCollection('users')
+  const customer = users.find((user) => user.id === req.params.id && user.role === 'customer')
+  if (!customer) return res.status(404).json({ error: 'Customer account not found.' })
+  customer.name = name
+  customer.phone = phone
+  customer.address = address
+  await writeCollection('users', users)
+  res.json({ ...publicUser(customer), active: customer.active !== false })
+})
+
+app.patch('/api/admin/customers/:id/active', requireUser, requireAdmin, async (req, res) => {
+  if (typeof req.body.active !== 'boolean') return res.status(400).json({ error: 'Choose whether the customer account should be active.' })
+  const users = await readCollection('users')
+  const customer = users.find((user) => user.id === req.params.id && user.role === 'customer')
+  if (!customer) return res.status(404).json({ error: 'Customer account not found.' })
+  customer.active = req.body.active
+  await writeCollection('users', users)
+  res.json({ ...publicUser(customer), active: customer.active })
+})
+
+app.delete('/api/admin/customers/:id', requireUser, requireAdmin, async (req, res) => {
+  const users = await readCollection('users')
+  const customerIndex = users.findIndex((user) => user.id === req.params.id && user.role === 'customer')
+  if (customerIndex < 0) return res.status(404).json({ error: 'Customer account not found.' })
+  users.splice(customerIndex, 1)
+  await writeCollection('users', users)
+  res.status(204).end()
 })
 
 app.post('/api/messages', requireUser, async (req, res) => {
@@ -262,6 +302,7 @@ app.post('/api/auth/google', async (req, res) => {
       if (user) user.googleSub = payload.sub
     }
     if (!user) return res.status(404).json({ error: 'No account exists for this Gmail address. Create an account first.' })
+    if (user.active === false) return res.status(403).json({ error: 'This account has been deactivated. Contact store support.' })
     await writeCollection('users', users)
     res.json(startSession(user))
   } catch {
@@ -274,6 +315,7 @@ app.post('/api/auth/login', async (req, res) => {
   const users = await readCollection('users')
   const user = users.find((entry) => entry.email === email)
   if (!user || !verifyPassword(String(req.body.password || ''), user.password)) return res.status(401).json({ error: 'The email or password is incorrect.' })
+  if (user.active === false) return res.status(403).json({ error: 'This account has been deactivated. Contact store support.' })
   res.json(startSession(user))
 })
 
@@ -333,6 +375,11 @@ async function createXenditSession(order, items) {
   successUrl.searchParams.set('order', order.id)
   cancelUrl.searchParams.set('payment', 'failed')
   cancelUrl.searchParams.set('order', order.id)
+  console.log('========== XENDIT DEBUG ==========')
+  console.log('Order ID:', order.id)
+  console.log('Success URL:', successUrl.toString())
+  console.log('Failure URL:', cancelUrl.toString())
+  console.log('==================================')
   const phoneDigits = String(order.phone || '').replace(/\D/g, '')
   const mobileNumber = phoneDigits ? phoneDigits.startsWith('0') ? `+63${phoneDigits.slice(1)}` : `+${phoneDigits}` : undefined
   const payload = {
@@ -392,6 +439,7 @@ async function createXenditSession(order, items) {
 }
 
 app.post('/api/orders', requireUser, async (req, res) => {
+  if (req.user.role === 'admin') return res.status(403).json({ error: 'Admin accounts cannot place orders.' })
   const { name, email, phone, address, region, payment, items } = req.body
   if (!name || !email || !phone || !address || !Array.isArray(items) || !items.length || !['Luzon', 'Visayas', 'Mindanao'].includes(region) || !['Cash on delivery', 'Cashless'].includes(payment)) return res.status(400).json({ error: 'Complete the delivery and payment details.' })
   const products = await readCollection('products')

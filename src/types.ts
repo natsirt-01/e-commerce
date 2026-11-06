@@ -19,6 +19,8 @@ export type User = {
   role: 'customer' | 'admin'
 }
 
+export type AdminCustomer = User & { active: boolean }
+
 export type OrderStatus = 'Pending' | 'On delivery' | 'Delivered' | 'Cancelled'
 
 export type Order = {

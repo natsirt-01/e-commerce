@@ -10,7 +10,7 @@ import { SiteHeader } from './components/SiteHeader'
 import { TrackingDialog } from './components/TrackingDialog'
 import { initialProducts } from './data/products'
 import { api } from './lib/api'
-import type { Order, OrderStatus, Product, SellerMessageType, SellerMessage, User } from './types'
+import type { AdminCustomer, Order, OrderStatus, Product, SellerMessageType, SellerMessage, User } from './types'
 import './App.css'
 
 type Overlay = 'auth' | 'profile' | 'cart' | 'tracking' | null
@@ -35,9 +35,10 @@ function App() {
     try { return JSON.parse(localStorage.getItem('grill-user') || 'null') as User | null } catch { return null }
   })
   const [overlay, setOverlay] = useState<Overlay>(null)
-  const [adminMode, setAdminMode] = useState(false)
+  const [adminMode, setAdminMode] = useState(() => user?.role === 'admin')
   const [customerMode, setCustomerMode] = useState(false)
   const [sellerMessages, setSellerMessages] = useState<SellerMessage[]>([])
+  const [adminCustomers, setAdminCustomers] = useState<AdminCustomer[]>([])
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [category, setCategory] = useState('All grills')
   const [toast, setToast] = useState('')
@@ -53,12 +54,15 @@ function App() {
     if (storedToken) {
       api.getMe().then((currentUser) => {
         setUser(currentUser)
+        setAdminMode(currentUser.role === 'admin')
         setCustomerMode(currentUser.role === 'customer')
         localStorage.setItem('grill-user', JSON.stringify(currentUser))
+        if (currentUser.role === 'admin') void openAdmin()
       }).catch(() => {
         api.clearSession()
         localStorage.removeItem('grill-user')
         setUser(null)
+        setAdminMode(false)
         setCustomerMode(false)
       }).finally(loadOrders)
     } else loadOrders()
@@ -82,14 +86,22 @@ function App() {
   function handleLogin(nextUser: User) {
     setUser(nextUser)
     setCustomerMode(nextUser.role === 'customer')
-    setAdminMode(false)
+    setAdminMode(nextUser.role === 'admin')
     localStorage.setItem('grill-user', JSON.stringify(nextUser))
     api.getOrders().then(setOrders).catch(() => undefined)
     setOverlay(null)
+    if (nextUser.role === 'admin') {
+      setCart([])
+      void openAdmin()
+    }
     showToast(`Welcome, ${nextUser.name}!`)
   }
 
   function addToCart(product: Product) {
+    if (user?.role === 'admin') {
+      showToast('Admin accounts cannot place orders.')
+      return
+    }
     if (!user) {
       setOverlay('auth')
       return
@@ -102,6 +114,10 @@ function App() {
   }
 
   async function checkout(details: CheckoutDetails): Promise<boolean> {
+    if (user?.role === 'admin') {
+      showToast('Admin accounts cannot place orders.')
+      return false
+    }
     if (!user) {
       setOverlay('auth')
       return false
@@ -149,8 +165,11 @@ function App() {
 
   async function openAdmin() {
     setAdminMode(true)
-    try { setSellerMessages(await api.getAdminMessages()) }
-    catch (reason) { showToast(reason instanceof Error ? reason.message : 'Unable to load seller messages.') }
+    try {
+      const [messages, customers] = await Promise.all([api.getAdminMessages(), api.getAdminCustomers()])
+      setSellerMessages(messages)
+      setAdminCustomers(customers)
+    } catch (reason) { showToast(reason instanceof Error ? reason.message : 'Unable to load admin data.') }
   }
 
   function signOut() {
@@ -163,14 +182,23 @@ function App() {
     setOverlay(null)
   }
 
-  if (adminMode && user?.role === 'admin') return <AdminDashboard products={products} orders={orders} messages={sellerMessages} onBack={() => setAdminMode(false)} onSaveProduct={async (product) => {
+  if (adminMode && user?.role === 'admin') return <AdminDashboard products={products} orders={orders} messages={sellerMessages} customers={adminCustomers} onSignOut={signOut} onSaveProduct={async (product) => {
     const saved = products.some((item) => item.id === product.id) ? await api.updateProduct(product) : await api.createProduct(product)
     setProducts((current) => current.some((item) => item.id === saved.id) ? current.map((item) => item.id === saved.id ? saved : item) : [...current, saved])
     return saved
   }} onDeleteProduct={async (id) => {
     await api.deleteProduct(id)
     setProducts((current) => current.filter((product) => product.id !== id))
-  }} onUpdateStatus={changeStatus} />
+  }} onUpdateStatus={changeStatus} onUpdateCustomer={async (id, data) => {
+    const updated = await api.updateAdminCustomer(id, data)
+    setAdminCustomers((current) => current.map((customer) => customer.id === updated.id ? updated : customer))
+  }} onSetCustomerActive={async (id, active) => {
+    const updated = await api.setAdminCustomerActive(id, active)
+    setAdminCustomers((current) => current.map((customer) => customer.id === updated.id ? updated : customer))
+  }} onDeleteCustomer={async (id) => {
+    await api.deleteAdminCustomer(id)
+    setAdminCustomers((current) => current.filter((customer) => customer.id !== id))
+  }} />
 
   if (customerMode && user?.role === 'customer') return <>
     <CustomerDashboard

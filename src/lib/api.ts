@@ -1,4 +1,4 @@
-import type { Order, OrderStatus, Product, SellerMessage, SellerMessageType, User } from '../types'
+import type { AdminCustomer, Order, OrderStatus, Product, SellerMessage, SellerMessageType, User } from '../types'
 
 const tokenKey = 'grill-session-token'
 
@@ -23,6 +23,10 @@ export const api = {
   getProducts: () => request<Product[]>('/products'),
   getOrders: () => request<Order[]>('/orders'),
   getAdminMessages: () => request<SellerMessage[]>('/admin/messages'),
+  getAdminCustomers: () => request<AdminCustomer[]>('/admin/customers'),
+  updateAdminCustomer: (id: string, data: Pick<User, 'name' | 'phone' | 'address'>) => request<AdminCustomer>(`/admin/customers/${encodeURIComponent(id)}`, { method: 'PUT', body: JSON.stringify(data) }),
+  setAdminCustomerActive: (id: string, active: boolean) => request<AdminCustomer>(`/admin/customers/${encodeURIComponent(id)}/active`, { method: 'PATCH', body: JSON.stringify({ active }) }),
+  deleteAdminCustomer: (id: string) => request<void>(`/admin/customers/${encodeURIComponent(id)}`, { method: 'DELETE' }),
   sendSellerMessage: (data: { type: SellerMessageType; productId?: string; message: string }) => request<{ submitted: boolean }>('/messages', { method: 'POST', body: JSON.stringify(data) }),
   getMe: () => request<User>('/me'),
   requestCode: (email: string, purpose: 'register' | 'reset') => request<{ sent: boolean; expiresInMinutes: number }>('/auth/request-code', { method: 'POST', body: JSON.stringify({ email, purpose }) }),
