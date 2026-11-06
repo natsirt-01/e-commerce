@@ -1,0 +1,157 @@
+[
+  {
+    "id": "TGJ-5EE0A49248229B0D",
+    "customer": "jgrkgwkjgw",
+    "email": "tristanavendano20@gmail.com",
+    "phone": "09812558010",
+    "address": "Sta Lucia",
+    "region": "Mindanao",
+    "items": [
+      {
+        "productId": "storage-004",
+        "name": "Grill with Storage",
+        "quantity": 1,
+        "price": 5790
+      }
+    ],
+    "total": 5790,
+    "payment": "Cashless",
+    "paymentStatus": "Awaiting payment",
+    "status": "Pending",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 7,
+    "paymentSessionId": "ps-6aed8d3611e31c8087879fdf"
+  },
+  {
+    "id": "TGJ-95322CE0DE618AFD",
+    "customer": "jgrkgwkjgw",
+    "email": "tristanavendano20@gmail.com",
+    "phone": "09812558010",
+    "address": "Sta Lucia",
+    "region": "Mindanao",
+    "items": [
+      {
+        "productId": "storage-004",
+        "name": "Grill with Storage",
+        "quantity": 1,
+        "price": 5790
+      }
+    ],
+    "total": 5790,
+    "payment": "Cashless",
+    "paymentStatus": "Awaiting payment",
+    "status": "Pending",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 7,
+    "paymentSessionId": "ps-6aed8c359104fa5c9e8603b5"
+  },
+  {
+    "id": "TGJ-3DB864D63109AE5C",
+    "customer": "jgrkgwkjgw",
+    "email": "tristanavendano20@gmail.com",
+    "phone": "09812558010",
+    "address": "Sta Lucia",
+    "region": "Luzon",
+    "items": [
+      {
+        "productId": "station-001",
+        "name": "All Packed Grilling Station",
+        "quantity": 1,
+        "price": 8490
+      }
+    ],
+    "total": 8490,
+    "payment": "Cash on delivery",
+    "paymentStatus": "Cash on delivery",
+    "status": "Cancelled",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 3
+  },
+  {
+    "id": "TGJ-4E1ACB1651B88260",
+    "customer": "jgrkgwkjgw",
+    "email": "tristanavendano20@gmail.com",
+    "phone": "09812558010",
+    "address": "Sta Lucia",
+    "region": "Mindanao",
+    "items": [
+      {
+        "productId": "portable-002",
+        "name": "Portable Grill Set",
+        "quantity": 1,
+        "price": 3290
+      }
+    ],
+    "total": 3290,
+    "payment": "Cashless",
+    "paymentStatus": "Awaiting payment",
+    "status": "Pending",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 7,
+    "paymentSessionId": "ps-6aed8b7791921f6be3c66933"
+  },
+  {
+    "id": "TGJ-5569CCB217CE9357",
+    "customer": "jgrkgwkjgw",
+    "email": "tristanavendano20@gmail.com",
+    "phone": "09812558010",
+    "address": "Sta Lucia",
+    "region": "Luzon",
+    "items": [
+      {
+        "productId": "portable-002",
+        "name": "Portable Grill Set",
+        "quantity": 1,
+        "price": 3290
+      }
+    ],
+    "total": 3290,
+    "payment": "Cash on delivery",
+    "paymentStatus": "Cash on delivery",
+    "status": "Pending",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 3
+  },
+  {
+    "id": "TGJ-602602",
+    "customer": "devega",
+    "email": "devegachristian1@gmail.com",
+    "phone": "09516414852",
+    "address": "sta ana",
+    "region": "Luzon",
+    "items": [
+      {
+        "productId": "station-001",
+        "name": "All Packed Grilling Station",
+        "quantity": 1,
+        "price": 8490
+      }
+    ],
+    "total": 8490,
+    "payment": "Cashless",
+    "status": "Cancelled",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 3
+  },
+  {
+    "id": "TGJ-1042",
+    "customer": "Demo Customer",
+    "email": "demo@grillphrenz.ph",
+    "phone": "",
+    "address": "Demo address, Davao City",
+    "region": "Mindanao",
+    "items": [
+      {
+        "productId": "portable-002",
+        "name": "Portable Grill Set",
+        "quantity": 1,
+        "price": 3290
+      }
+    ],
+    "total": 3290,
+    "payment": "Cash on delivery",
+    "status": "On delivery",
+    "placedAt": "Nov 06, 2026",
+    "deliveryDays": 7
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "admin-001",
+    "name": "Store Admin",
+    "email": "tristanbalagtas1@gmail.com",
+    "phone": "",
+    "address": "",
+    "role": "admin",
+    "password": {
+      "salt": "bcd51717fb34ab0b9de23b27635406b1",
+      "hash": "0be8d1f714fe015b093bacaeb8d3ebb5086a83cc74ec6c8a78cb802b88883c6a2b6171f1eca7c95be030c469b6c8162a7c020552b0fda111efc8054f8fc782bf"
+    }
+  },
+  {
+    "id": "user-1793943563201",
+    "name": "devega",
+    "email": "devegachristian1@gmail.com",
+    "phone": "09516414852",
+    "address": "sta ana",
+    "role": "customer",
+    "password": {
+      "salt": "131aaf5192d50f6e6d092e978321a75c",
+      "hash": "94d031cb96317641f0e9bfb6775b11fe0e6569ca2cbf5e34eb93d1efa02e4c892bf0c9a185c6b82032ba338c86331a045ed21bb2ccc3d2293a1d35ab86e69e52"
+    }
+  },
+  {
+    "id": "user-1793950222915",
+    "name": "jgrkgwkjgw",
+    "email": "tristanavendano20@gmail.com",
+    "phone": "09812558010",
+    "address": "Sta Lucia",
+    "role": "customer",
+    "password": {
+      "salt": "1755200f8071f8ee4c6c407a4499fcbc",
+      "hash": "46fc4326dcba56baa7df014e4cc3c483add08c78d48e55a123c91fd84d53c5bd74e0776c53ac228bbb750bac45672a347b28f336cd675aa8017ef0d774e13f29"
+    }
+  }
+]

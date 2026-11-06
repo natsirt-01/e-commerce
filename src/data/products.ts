@@ -1,0 +1,47 @@
+import type { Product } from '../types'
+
+export const initialProducts: Product[] = [
+  {
+    id: 'station-001',
+    name: 'All Packed Grilling Station',
+    category: 'Complete set',
+    description: 'Enjoy hassle-free grilling with this complete grilling station! Equipped with a built-in grill, organized shelves, storage compartments, and spaces for all your grilling essentials. Perfect for food businesses and barbecue enthusiasts.',
+    materials: 'Powder-coated steel, stainless grill grate, heat-resistant handles',
+    price: 8490,
+    image: '/products/grilling-station.png',
+    badge: 'Best seller',
+    stock: 11,
+  },
+  {
+    id: 'portable-002',
+    name: 'Portable Grill Set',
+    category: 'Portable',
+    description: 'Take your grilling experience anywhere with this portable grill set! Designed for easy transportation, convenient setup, and durable performance. Perfect for outdoor gatherings, camping, and family barbecue sessions.',
+    materials: 'Stainless steel body, foldable legs, removable charcoal tray',
+    price: 3290,
+    image: '/products/portable-grill.png',
+    badge: 'Ready for the road',
+    stock: 24,
+  },
+  {
+    id: 'cart-003',
+    name: 'Cart Grill Set',
+    category: 'With cart',
+    description: 'Make grilling more convenient with this sturdy cart grill set! Featuring a built-in charcoal grill, durable stainless steel construction, and easy-to-move wheels. Ideal for food vendors, outdoor events, and barbecue businesses.',
+    materials: 'Powder-coated steel, stainless grate, two-wheel cart frame',
+    price: 6990,
+    image: '/products/cart-grill.png',
+    stock: 8,
+  },
+  {
+    id: 'storage-004',
+    name: 'Grill with Storage',
+    category: 'With storage',
+    description: 'Keep your grilling essentials within reach with this durable grill with storage! Featuring a spacious built-in cabinet, stainless steel grill, and convenient wheels. The perfect combination of cooking performance and organized storage.',
+    materials: 'Heavy-duty steel, stainless grate, lower storage shelf',
+    price: 5790,
+    image: '/products/grill-with-storage.png',
+    badge: 'Smart pick',
+    stock: 15,
+  },
+]
