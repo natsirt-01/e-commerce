@@ -1,0 +1,10 @@
+{
+  "rates": {
+    "boks": {
+      "method": "boks",
+      "percentage": 1,
+      "fixed": 50,
+      "minimum": 50
+    }
+  }
+}

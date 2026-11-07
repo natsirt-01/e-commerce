@@ -1,4 +1,4 @@
-import { ArrowLeft, Flame, ShieldCheck, X } from 'lucide-react'
+import { ArrowLeft, Eye, EyeOff, Flame, ShieldCheck, X } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
 import { GoogleSignInButton, isGoogleConfigured } from './GoogleSignInButton'
 import { api } from '../lib/api'
@@ -6,6 +6,44 @@ import type { User } from '../types'
 
 type Mode = 'login' | 'register' | 'forgot'
 type Props = { onClose: () => void; onAuthenticated: (user: User) => void }
+
+function PasswordField({ label, autoComplete, value, onChange }: {
+  label: string
+  autoComplete?: string
+  value: string
+  onChange: (value: string) => void
+}) {
+  const [visible, setVisible] = useState(false)
+
+  return (
+    <label className="password-field">
+      {label}
+      <span className="password-input-wrap">
+        <input
+          required
+          type={visible ? 'text' : 'password'}
+          minLength={10}
+          pattern="(?=.*[^A-Za-z0-9]).{10,}"
+          title="Use at least 10 characters and include at least one special character."
+          autoComplete={autoComplete}
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+          placeholder="10+ characters with a special character"
+        />
+        <button
+          className="password-visibility-toggle"
+          type="button"
+          aria-label={visible ? 'Hide password' : 'Show password'}
+          aria-pressed={visible}
+          onClick={() => setVisible((current) => !current)}
+        >
+          {visible ? <EyeOff size={17} /> : <Eye size={17} />}
+        </button>
+      </span>
+      <small className="password-requirement">At least 10 characters and 1 special character.</small>
+    </label>
+  )
+}
 
 export function AuthDialog({ onClose, onAuthenticated }: Props) {
   const [mode, setMode] = useState<Mode>('login')
@@ -97,7 +135,7 @@ export function AuthDialog({ onClose, onAuthenticated }: Props) {
             <h3>Defective or missing items</h3>
             <p>Report an issue within 48 hours of delivery and include clear photos and your order number. We will review the report and offer repair, replacement, or refund depending on the findings and availability.</p>
             <h3>Cancellations</h3>
-            <p>Orders can be cancelled while Pending. Orders cannot be changed after they are Delivered or Cancelled.</p>
+            <p>Orders can be cancelled while Order Placed. Delivery updates are managed by the store team, and completed or cancelled orders cannot be changed.</p>
             <p className="terms-note">These are sample terms. Replace them with your final business policies before accepting real customers.</p>
           </div>
         ) : (
@@ -114,7 +152,7 @@ export function AuthDialog({ onClose, onAuthenticated }: Props) {
                 <label>Email address<input required type="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@gmail.com" /></label>
                 <label>Mobile number<input required type="tel" autoComplete="tel" value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="09XX XXX XXXX" /></label>
                 <label>Delivery address<input required autoComplete="street-address" value={form.address} onChange={(e) => update('address', e.target.value)} placeholder="Barangay, city / municipality" /></label>
-                <label>Password<input required type="password" minLength={6} autoComplete="new-password" value={form.password} onChange={(e) => update('password', e.target.value)} placeholder="At least 6 characters" /></label>
+                <PasswordField label="Password" autoComplete="new-password" value={form.password} onChange={(value) => update('password', value)} />
                 <label className="consent-row"><input type="checkbox" checked={acceptedTerms} onChange={(e) => setAcceptedTerms(e.target.checked)} /><span>I agree to the <button type="button" className="text-link" onClick={() => setShowTerms(true)}>Terms & Conditions</button> and the use of my data to process orders.</span></label>
                 {isGoogleConfigured && <div className="google-auth-block register-google-block">
                   <GoogleSignInButton onCredential={handleGoogleCredential} onUnavailable={() => setError('Google sign-in needs a valid Web OAuth client ID in GOOGLE_CLIENT_ID.')} />
@@ -123,14 +161,14 @@ export function AuthDialog({ onClose, onAuthenticated }: Props) {
               </>}
               {mode === 'login' && <>
                 <label>Email address<input required type="email" autoComplete="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@gmail.com" /></label>
-                <label>Password<input required type="password" autoComplete="current-password" value={form.password} onChange={(e) => update('password', e.target.value)} placeholder="Enter your password" /></label>
+                <PasswordField label="Password" autoComplete="current-password" value={form.password} onChange={(value) => update('password', value)} />
                 <button type="button" className="text-link forgot-link" onClick={() => { setMode('forgot'); setCodeSent(false); setError(''); setSuccess('') }}>Forgot password?</button>
               </>}
               {mode === 'forgot' && !codeSent && <label>Email address<input required type="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@gmail.com" /></label>}
               {codeSent && <>
                 <p className="verification-note"><ShieldCheck size={16} /> Enter the 6-digit code sent to your email address.</p>
                 <label>Verification code<input required inputMode="numeric" maxLength={6} value={form.code} onChange={(e) => update('code', e.target.value)} placeholder="6-digit code" /></label>
-                {mode === 'forgot' && <label>New password<input required type="password" minLength={6} value={form.password} onChange={(e) => update('password', e.target.value)} placeholder="At least 6 characters" /></label>}
+                {mode === 'forgot' && <PasswordField label="New password" autoComplete="new-password" value={form.password} onChange={(value) => update('password', value)} />}
               </>}
               {error && <p className="form-error" role="alert">{error}</p>}
               {success && <p className="success-message" role="status">{success}</p>}

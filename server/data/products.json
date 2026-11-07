@@ -8,7 +8,7 @@
     "price": 8490,
     "image": "/products/grilling-station.png",
     "badge": "Best seller",
-    "stock": 2
+    "stock": 0
   },
   {
     "id": "portable-002",
@@ -19,7 +19,7 @@
     "price": 3290,
     "image": "/products/portable-grill.png",
     "badge": "Ready for the road",
-    "stock": 18
+    "stock": 11
   },
   {
     "id": "cart-003",
@@ -29,7 +29,7 @@
     "materials": "Powder-coated steel, stainless grate, two-wheel cart frame",
     "price": 6990,
     "image": "/products/cart-grill.png",
-    "stock": 8
+    "stock": 4
   },
   {
     "id": "storage-004",
@@ -40,16 +40,16 @@
     "price": 5790,
     "image": "/products/grill-with-storage.png",
     "badge": "Smart pick",
-    "stock": 13
+    "stock": 10
   },
   {
-    "id": "grill-1793958565840",
-    "name": "a",
-    "category": "a",
-    "description": "a",
-    "materials": "a",
-    "price": 1,
+    "id": "grill-1793996016956",
+    "name": "apple",
+    "category": "apple",
+    "description": "apple",
+    "materials": "apple",
+    "price": 50,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40Pg-5uzjOg7eXz8ZW9_P7qgOQ3tFLEo7xwPcVwA-lg&s=10",
-    "stock": 1
+    "stock": 5
   }
 ]

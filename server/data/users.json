@@ -2,13 +2,13 @@
   {
     "id": "admin-001",
     "name": "Store Admin",
-    "email": "tristanbalagtas1@gmail.com",
+    "email": "phrenzj@gmail.com",
     "phone": "",
     "address": "",
     "role": "admin",
     "password": {
-      "salt": "1a12f78dc50048d51c5eb03d6e9ea7db",
-      "hash": "986b5f81faa7dedc60ead132a03c9785ba2352dbda53af0f0dba01ffa282d12cb230aaa4fe17ad34ecd15ede85719915c3bb24980bfdc3da78c4545e340444a1"
+      "salt": "0cedef8f308e78223fd037b8c043c665",
+      "hash": "5807c527614a02626d2fc701b7084c9ed27bbe863515e8366b269c92fc276a48dd583c77abc7153df8854c69f1112cd3ce9c15b60b63e05d963aa109bcd96512"
     }
   },
   {
@@ -19,20 +19,8 @@
     "address": "sta ana",
     "role": "customer",
     "password": {
-      "salt": "131aaf5192d50f6e6d092e978321a75c",
-      "hash": "94d031cb96317641f0e9bfb6775b11fe0e6569ca2cbf5e34eb93d1efa02e4c892bf0c9a185c6b82032ba338c86331a045ed21bb2ccc3d2293a1d35ab86e69e52"
-    }
-  },
-  {
-    "id": "user-1793950222915",
-    "name": "jgrkgwkjgw",
-    "email": "tristanavendano20@gmail.com",
-    "phone": "09812558010",
-    "address": "Sta Lucia",
-    "role": "customer",
-    "password": {
-      "salt": "1755200f8071f8ee4c6c407a4499fcbc",
-      "hash": "46fc4326dcba56baa7df014e4cc3c483add08c78d48e55a123c91fd84d53c5bd74e0776c53ac228bbb750bac45672a347b28f336cd675aa8017ef0d774e13f29"
+      "salt": "96f972adcbd88c0ffc4fce9d6b25e216",
+      "hash": "ca84963364ae25813ec90c1b758174ba6dfcff160f80107fb7b7b37aa3cdccb107c5b7ff9deb0ab159234af8ad93feb0683627b384a0ceab3d2922114117fbf5"
     }
   },
   {

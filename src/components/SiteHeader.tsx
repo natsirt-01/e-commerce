@@ -1,5 +1,6 @@
-import { Flame, Menu, ShieldCheck, UserRound, X } from 'lucide-react'
+import { Menu, ShieldCheck, UserRound, X } from 'lucide-react'
 import { useState } from 'react'
+import { GrillMark } from './GrillMark'
 import type { User } from '../types'
 
 type Props = {
@@ -14,7 +15,7 @@ export function SiteHeader({ user, onAccount, onAdmin }: Props) {
   return (
     <header className="site-header">
       <a className="wordmark" href="#home" aria-label="The Grill Phrenz J home">
-        <span className="brand-mark"><Flame size={19} strokeWidth={2.5} /></span>
+        <GrillMark />
         <span>The Grill <b>Phrenz J</b></span>
       </a>
       <button className="mobile-menu icon-button" aria-label="Open menu" onClick={() => setMenuOpen(!menuOpen)}>

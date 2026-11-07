@@ -1,0 +1,38 @@
+[
+  {
+    "id": "PROMO-DAD28842EBDE547E",
+    "name": "12:12",
+    "description": "Enjoy discount",
+    "discountPercent": 10,
+    "freeShipping": true,
+    "active": false,
+    "startDate": "2026-11-06",
+    "expirationDate": "2026-11-30",
+    "allowWelcomeStacking": false,
+    "createdAt": "2026-11-06T11:27:36.168Z"
+  },
+  {
+    "id": "PROMO-A7569608BA09688B",
+    "name": "11:11",
+    "description": "a",
+    "discountPercent": 10,
+    "freeShipping": true,
+    "active": false,
+    "startDate": "2026-11-07",
+    "expirationDate": "2026-11-30",
+    "allowWelcomeStacking": true,
+    "createdAt": "2026-11-06T19:49:52.949Z"
+  },
+  {
+    "id": "PROMO-6181A4FC564D5008",
+    "name": "devega",
+    "description": "devega",
+    "discountPercent": 10,
+    "freeShipping": true,
+    "active": true,
+    "startDate": "2026-11-07",
+    "expirationDate": "2026-11-17",
+    "allowWelcomeStacking": true,
+    "createdAt": "2026-11-06T20:01:35.561Z"
+  }
+]

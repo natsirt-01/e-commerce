@@ -11,6 +11,8 @@ export const initialProducts: Product[] = [
     image: '/products/grilling-station.png',
     badge: 'Best seller',
     stock: 11,
+    sellerId: 'admin-001',
+    sellerName: 'The Grill Phrenz J',
   },
   {
     id: 'portable-002',
@@ -22,6 +24,8 @@ export const initialProducts: Product[] = [
     image: '/products/portable-grill.png',
     badge: 'Ready for the road',
     stock: 24,
+    sellerId: 'admin-001',
+    sellerName: 'The Grill Phrenz J',
   },
   {
     id: 'cart-003',
@@ -32,6 +36,8 @@ export const initialProducts: Product[] = [
     price: 6990,
     image: '/products/cart-grill.png',
     stock: 8,
+    sellerId: 'admin-001',
+    sellerName: 'The Grill Phrenz J',
   },
   {
     id: 'storage-004',
@@ -43,5 +49,7 @@ export const initialProducts: Product[] = [
     image: '/products/grill-with-storage.png',
     badge: 'Smart pick',
     stock: 15,
+    sellerId: 'admin-001',
+    sellerName: 'The Grill Phrenz J',
   },
 ]

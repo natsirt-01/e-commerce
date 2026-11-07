@@ -1,0 +1,675 @@
+{
+  "source": "https://phlpost.gov.ph/zip-code-locator/",
+  "records": [
+    {
+      "province": "Zambales",
+      "location": "Botolan",
+      "zipCode": "2202"
+    },
+    {
+      "province": "Zambales",
+      "location": "Cabangan",
+      "zipCode": "2203"
+    },
+    {
+      "province": "Zambales",
+      "location": "Candelaria",
+      "zipCode": "2212"
+    },
+    {
+      "province": "Zambales",
+      "location": "Castillejos",
+      "zipCode": "2208"
+    },
+    {
+      "province": "Zambales",
+      "location": "Iba",
+      "zipCode": "2201"
+    },
+    {
+      "province": "Zambales",
+      "location": "Olongapo City",
+      "zipCode": "2200"
+    },
+    {
+      "province": "Zambales",
+      "location": "Palauig",
+      "zipCode": "2210"
+    },
+    {
+      "province": "Zambales",
+      "location": "San Antonio",
+      "zipCode": "2206"
+    },
+    {
+      "province": "Zambales",
+      "location": "San Felipe",
+      "zipCode": "2204"
+    },
+    {
+      "province": "Zambales",
+      "location": "San Marcelino",
+      "zipCode": "2207"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Victoria",
+      "zipCode": "2313"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Tarlac",
+      "zipCode": "2300"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Sta. Ignacia",
+      "zipCode": "2303"
+    },
+    {
+      "province": "Tarlac",
+      "location": "San Manuel",
+      "zipCode": "2309"
+    },
+    {
+      "province": "Tarlac",
+      "location": "San Jose",
+      "zipCode": "2318"
+    },
+    {
+      "province": "Tarlac",
+      "location": "San Clemente",
+      "zipCode": "2305"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Ramos",
+      "zipCode": "2311"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Pura",
+      "zipCode": "2312"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Paniqui",
+      "zipCode": "2307"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Bamban",
+      "zipCode": "2317"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Moncada",
+      "zipCode": "2308"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Mayantoc",
+      "zipCode": "2304"
+    },
+    {
+      "province": "Tarlac",
+      "location": "La Paz",
+      "zipCode": "2314"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Gerona",
+      "zipCode": "2302"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Concepcion",
+      "zipCode": "2316"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Capas",
+      "zipCode": "2315"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Camiling",
+      "zipCode": "2306"
+    },
+    {
+      "province": "Tarlac",
+      "location": "Anao",
+      "zipCode": "2310"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Santa Cruz, Lubao",
+      "zipCode": "2025"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Sasmuan",
+      "zipCode": "2004"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Santo Tomas",
+      "zipCode": "2020"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Santa Rita",
+      "zipCode": "2002"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Santa Ana",
+      "zipCode": "2022"
+    },
+    {
+      "province": "Pampanga",
+      "location": "San Simon",
+      "zipCode": "2015"
+    },
+    {
+      "province": "Pampanga",
+      "location": "San Luis",
+      "zipCode": "2014"
+    },
+    {
+      "province": "Pampanga",
+      "location": "San Fernando",
+      "zipCode": "2000"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Porac",
+      "zipCode": "2008"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Dau, Mabalacat",
+      "zipCode": "2026"
+    },
+    {
+      "province": "Pampanga",
+      "location": "CSEZ, Clark",
+      "zipCode": "2023"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Basa airbase",
+      "zipCode": "2007"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Minalin",
+      "zipCode": "2019"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Masantol",
+      "zipCode": "2017"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Mexico",
+      "zipCode": "2021"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Magalang",
+      "zipCode": "2011"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Macabebe",
+      "zipCode": "2018"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Mabalacat",
+      "zipCode": "2010"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Lubao",
+      "zipCode": "2005"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Guagua",
+      "zipCode": "2003"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Floridablanca",
+      "zipCode": "2006"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Candaba",
+      "zipCode": "2013"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Bacolor",
+      "zipCode": "2001"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Arayat",
+      "zipCode": "2012"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Apalit",
+      "zipCode": "2016"
+    },
+    {
+      "province": "Pampanga",
+      "location": "Angeles City",
+      "zipCode": "2009"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Fort Magsaysay",
+      "zipCode": "3130"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Sta. Rosa",
+      "zipCode": "3101"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Sto. Domingo",
+      "zipCode": "3133"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Talavera",
+      "zipCode": "3114"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Talugtog",
+      "zipCode": "3118"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Zaragoza",
+      "zipCode": "3110"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "San Leonardo",
+      "zipCode": "3102"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "San Jose City",
+      "zipCode": "3121"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "San Isidro",
+      "zipCode": "3106"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Rizal",
+      "zipCode": "3127"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "San Antonio",
+      "zipCode": "3108"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Quezon",
+      "zipCode": "3113"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Peñaranda",
+      "zipCode": "3103"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Pantabangan",
+      "zipCode": "3124"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Palayan City",
+      "zipCode": "3132"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Nampicuan",
+      "zipCode": "3116"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Muñoz",
+      "zipCode": "3119"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Lupao",
+      "zipCode": "3122"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Llanera",
+      "zipCode": "3126"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Licab",
+      "zipCode": "3112"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Central Luzon State University",
+      "zipCode": "3120"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Jaen",
+      "zipCode": "3109"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Laur",
+      "zipCode": "3129"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Guimba",
+      "zipCode": "3115"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Gen. Tinio",
+      "zipCode": "3104"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Gen. M. Natividad",
+      "zipCode": "3125"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Gapan City",
+      "zipCode": "3105"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Gabaldon",
+      "zipCode": "3131"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Cuyapo",
+      "zipCode": "3117"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Carrangalan",
+      "zipCode": "3123"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Cabiao",
+      "zipCode": "3107"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Cabanatuan City",
+      "zipCode": "3100"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Bongabon",
+      "zipCode": "3128"
+    },
+    {
+      "province": "Nueva Ecija",
+      "location": "Aliaga",
+      "zipCode": "3111"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Sapang Palay",
+      "zipCode": "3024"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Sta. Maria",
+      "zipCode": "3022"
+    },
+    {
+      "province": "Bulacan",
+      "location": "San Rafael",
+      "zipCode": "3008"
+    },
+    {
+      "province": "Bulacan",
+      "location": "San Miguel",
+      "zipCode": "3011"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Doña Remedios Trinidad",
+      "zipCode": "3009"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Guiguinto",
+      "zipCode": "3015"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Hagonoy",
+      "zipCode": "3002"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Malolos",
+      "zipCode": "3000"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Marilao",
+      "zipCode": "3019"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Meycauayan",
+      "zipCode": "3020"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Norzagaray",
+      "zipCode": "3013"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Obando",
+      "zipCode": "3021"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Pandi",
+      "zipCode": "3014"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Paombong",
+      "zipCode": "3001"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Plaridel",
+      "zipCode": "3004"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Pulilan",
+      "zipCode": "3005"
+    },
+    {
+      "province": "Bulacan",
+      "location": "San Ildefonso",
+      "zipCode": "3010"
+    },
+    {
+      "province": "Bulacan",
+      "location": "San Jose Del Monte",
+      "zipCode": "3023"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Cruz Na Daan",
+      "zipCode": "3025"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Bulacan",
+      "zipCode": "3017"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Bustos",
+      "zipCode": "3007"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Calumpit",
+      "zipCode": "3003"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Bocaue",
+      "zipCode": "3018"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Baliuag",
+      "zipCode": "3006"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Balagtas",
+      "zipCode": "3016"
+    },
+    {
+      "province": "Bulacan",
+      "location": "Angat",
+      "zipCode": "3012"
+    },
+    {
+      "province": "Zambales",
+      "location": "San Narciso",
+      "zipCode": "2205"
+    },
+    {
+      "province": "Zambales",
+      "location": "Subic",
+      "zipCode": "2209"
+    },
+    {
+      "province": "Zambales",
+      "location": "Sta. Cruz",
+      "zipCode": "2213"
+    },
+    {
+      "province": "Bataan",
+      "location": "Lamao",
+      "zipCode": "2104"
+    },
+    {
+      "province": "Bataan",
+      "location": "FAB (Freefort Area of Bataan)",
+      "zipCode": "2106"
+    },
+    {
+      "province": "Bataan",
+      "location": "Cabcaben",
+      "zipCode": "2109"
+    },
+    {
+      "province": "Bataan",
+      "location": "Limay",
+      "zipCode": "2103"
+    },
+    {
+      "province": "Bataan",
+      "location": "Hermosa",
+      "zipCode": "2111"
+    },
+    {
+      "province": "Bataan",
+      "location": "Dinalupihan",
+      "zipCode": "2110"
+    },
+    {
+      "province": "Bataan",
+      "location": "Balanga",
+      "zipCode": "2100"
+    },
+    {
+      "province": "Bataan",
+      "location": "Bagac",
+      "zipCode": "2107"
+    },
+    {
+      "province": "Bataan",
+      "location": "Abucay",
+      "zipCode": "2114"
+    },
+    {
+      "province": "Aurora",
+      "location": "Casiguran",
+      "zipCode": "3204"
+    },
+    {
+      "province": "Aurora",
+      "location": "Dilasag",
+      "zipCode": "3205"
+    },
+    {
+      "province": "Aurora",
+      "location": "Dinalungan",
+      "zipCode": "3206"
+    },
+    {
+      "province": "Aurora",
+      "location": "Dingalan",
+      "zipCode": "3207"
+    },
+    {
+      "province": "Aurora",
+      "location": "Dipaculao",
+      "zipCode": "3203"
+    },
+    {
+      "province": "Aurora",
+      "location": "Maria Aurora",
+      "zipCode": "3202"
+    },
+    {
+      "province": "Aurora",
+      "location": "San Luis",
+      "zipCode": "3201"
+    },
+    {
+      "province": "Aurora",
+      "location": "Baler",
+      "zipCode": "3200"
+    }
+  ]
+}
